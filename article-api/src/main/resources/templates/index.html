@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>BELTEI IU</title>
+    <link th:href="@{/css/main.css}" rel="stylesheet" />
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <link th:href="@{/webjars/bootstrap/5.3.8/css/bootstrap.min.css}" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h1>Hi, Welcome to BELTEI IU</h1>
+        <img class="image responsive" th:src="@{/img/beltei_iu.png}"  width="40px"/>
+        <br/>
+        <a href="#" class="btn btn-info btn-sm">
+            <i class="bi bi-eye-fill"></i> Add New
+        </a>
+        <table class="table striped">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Qty</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr th:each="p : ${products}">
+                    <td>001</td>
+                    <td th:text="${p}"></td>
+                    <td>Top in cambodia</td>
+                    <td>1</td>
+                    <td>2000</td>
+                    <td>
+                        <a href="#" class="btn btn-info btn-sm">
+                            <i class="bi bi-eye-fill"></i> View
+                        </a>
+                        <a href="#" class="btn btn-info btn-sm">
+                            <i class="bi bi-eye-fill"></i> Edit
+                        </a>
+                        <a href="#" class="btn btn-info btn-sm">
+                            <i class="bi bi-eye-fill"></i> Delete
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script th:src="@{/js/js.js}" type="text/javascript" ></script>
+    <script th:src="@{/webjars/bootstrap/5.3.8/js/bootstrap.min.js}" ></script>
+    <script th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script>
+</body>
+</html>
