@@ -1,4 +1,4 @@
-package kh.edu.beltei.e3;
+package kh.edu.beltei.e3.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
